@@ -14,7 +14,7 @@ const PageNotFound = () => {
             <div className='content'>
                 <h1 className='main'>Oops... Page not found!</h1>
                 <p>It looks like this page doesn't exist. Maybe try one of the other pages!</p>
-                <NavLink to='/m/home' className='yellow-btn'>
+                <NavLink to='/home' className='yellow-btn'>
                         <p>Back to Home</p>
                 </NavLink>
             </div>

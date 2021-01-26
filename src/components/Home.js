@@ -19,7 +19,7 @@ const Home = () => {
                     <h1>Boost Your Online Sales With Spot Digital</h1>
                     <p>Leverage the power of Performance Marketing to increase online sales and grow brand recognition.</p>
                 </div>
-                <NavLink to='/m/contact' className='yellow-btn'>
+                <NavLink to='/contact' className='yellow-btn'>
                     <p>Learn More</p>
                 </NavLink>
             </div>
@@ -29,7 +29,7 @@ const Home = () => {
                     <h2>New To Performance Marketing?</h2>  
                     <p>Performance Marketing is a results-based strategy where brands only pay for successful sales by partnering with content creators. Partnering with content creators and publishers in your niche allows your brand to leverage their existing audience to generate sales and increase brand awareness.</p>
                 </div>
-                <NavLink to='/m/contact' className='yellow-outline-btn'>
+                <NavLink to='/contact' className='yellow-outline-btn'>
                     <p>Get in Touch</p>
                 </NavLink>
             </div>
@@ -92,7 +92,7 @@ const Home = () => {
                         <li>We will work with you to optimize your campaigns and grow your partnerships to achieve the results you want.</li>
                     </ol>
                     <div className='button'>
-                        <NavLink to='/m/contact' className='blue-btn'>
+                        <NavLink to='/contact' className='blue-btn'>
                             <p>Get Started</p>
                         </NavLink>
                     </div>

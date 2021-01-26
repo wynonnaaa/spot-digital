@@ -11,14 +11,15 @@ import ScrollToTop from '../functions/scrollToTop';
 const App = () => {
 
   return (
-    <Router>
+    <Router basename={"/m"}>
       <ScrollToTop>
         <div className='wrapper'>
           <Nav />
           <Switch>
-            <Route path={["/home", "/m/home"]} ><Home /></Route>
-            <Route path="/m/about" exact><About /></Route>
-            <Route path="/m/contact" exact><Contact /></Route>
+            <Route path="/" exact><Home /></Route>
+            <Route path="/home" exact><Home /></Route>
+            <Route path="/about" exact><About /></Route>
+            <Route path="/contact" exact><Contact /></Route>
             <Route><PageNotFound /></Route>
           </Switch>
           <Footer />

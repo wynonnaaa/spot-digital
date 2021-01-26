@@ -20,7 +20,7 @@ const Nav = () => {
         <div className='header-div'>
             <header>
                 <div className='logo'>
-                    <NavLink to="/m/home"><img src={logo} alt="Spot Digital Inc. logo" /></NavLink>
+                    <NavLink to="/home"><img src={logo} alt="Spot Digital Inc. logo" /></NavLink>
                 </div>
 
                 <div className='menu' >
@@ -36,13 +36,13 @@ const Nav = () => {
                 <nav className='desktop-menu'>
                     <ul>
                         <li>
-                            <NavLink to="/m/home">HOME</NavLink>
+                            <NavLink to="/">HOME</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/m/about">ABOUT</NavLink>
+                            <NavLink to="/about">ABOUT</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/m/contact">CONTACT</NavLink>
+                            <NavLink to="/contact">CONTACT</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -53,13 +53,13 @@ const Nav = () => {
                 <div className='overlay'>
                     <ul>
                         <li onClick={toggleClass}>
-                            <NavLink to="/m/home" exact>HOME</NavLink>
+                            <NavLink to="/home">HOME</NavLink>
                         </li>
                         <li onClick={toggleClass}>
-                            <NavLink to="/m/about">ABOUT</NavLink>
+                            <NavLink to="/about">ABOUT</NavLink>
                         </li>
                         <li onClick={toggleClass}>
-                            <NavLink to="/m/contact">CONTACT</NavLink>
+                            <NavLink to="/contact">CONTACT</NavLink>
                         </li>
                     </ul>
                     <div className='contact-info'>

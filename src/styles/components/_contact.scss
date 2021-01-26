@@ -78,13 +78,17 @@
             }
 
             a {
-                font-size: 18px;
-                color: $blue;
                 padding: 8px 16px;
+                font-size: 16px;
+                color: $blue;
                 background-size: 100% 200%;
                 border-radius: 2px;
                 transition: all 0.3s;
                 background-image: linear-gradient(to top, $blue 50%, #fff 50%); 
+
+                @include mq($desktopScreen) {
+                    font-size: 18px;
+                }
 
                 &:hover {
                     background-position: 0 100%; 
