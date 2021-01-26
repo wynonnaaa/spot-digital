@@ -1,0 +1,110 @@
+.contact-wrapper {
+    
+    padding: 0 15px;
+    margin-top: 61px;
+    min-height: 90vh;
+    background-image: url(../../images/contact.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 90%;
+    background-size: 70%;
+
+    @include mq($mobileLarge) {
+        padding-left: $padding-lg-phone;
+        padding-right: $padding-lg-phone;
+    }
+
+    @include mq($tabletScreen) {
+        padding-left: $padding-tablet;
+        padding-right: $padding-tablet;
+        background-size: 55%;
+        background-position-x: 90%;
+    }
+
+    @include mq($desktopScreen) {
+        padding-left: $padding-small-desktop;
+        padding-right: $padding-small-desktop;
+        background-size: 42%;
+    }
+
+    @include mq($medDesktopScreen) {
+        background-size: 37%;
+        background-position-y: 85%;
+    }
+
+    @include mq($largeDesktopScreen) {
+        padding-left: $padding-lg-desktop;
+        padding-right: $padding-lg-desktop;
+    }
+    
+    @include mq($retinaDisplay) {
+        padding-left: $padding-retina-body;
+        padding-right: $padding-retina-body;
+        background-size: 30%;
+        min-height: calc(100vh - 273px);
+        background-position: 80% 30%;
+    }
+
+    .contact-header {
+        .page-title {
+            font-weight: 400;
+            font-size: 12px;
+            text-transform: uppercase;
+            
+            font-size: 12px;
+            text-transform: uppercase;
+            @include mq($desktopScreen) {
+                padding-left: 0.35%;
+            }
+        }
+        p {
+            margin-top: 24px;
+            @include mq($tabletScreen) {
+                max-width: 50%;
+                padding-bottom: 16px;
+            }
+        }
+        margin-bottom: 40px;
+    }
+
+    .contact-body {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 200px;
+        
+        .info {
+            text-align: center;
+            h3 {
+                padding-bottom: 12px;
+            }
+
+            a {
+                font-size: 18px;
+                color: $blue;
+                padding: 8px 16px;
+                background-size: 100% 200%;
+                border-radius: 2px;
+                transition: all 0.3s;
+                background-image: linear-gradient(to top, $blue 50%, #fff 50%); 
+
+                &:hover {
+                    background-position: 0 100%; 
+                    color: #fff; 
+                    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            &:first-child {
+                margin-bottom: 40px;
+                @include mq($tabletScreen) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        @include mq($medDesktopScreen) {
+            padding-top: 20px;
+            padding-bottom: 250px;
+            margin: 0;
+        }
+    }
+}

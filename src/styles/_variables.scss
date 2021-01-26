@@ -1,0 +1,49 @@
+// Variables 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+$text-family: 'Montserrat', sans-serif;
+
+$button-font-size: 12px;
+$button-font-style: Uppercase;
+$button-font-weight: 500;
+
+$button-font-size-desktop: 16px;
+$button-font-weight-desktop: 400;
+
+$button-height: 33px;
+$button-width: 158px;
+
+$button-height-desktop: 43px;
+$button-width-desktop: 190px;
+
+// Colors
+$black: #131313;
+$yellow: #F3B61F;
+$blue: #3772FF;
+$white: #fff;
+
+
+// Media Query Breakpoints
+@function em($px,$bc: 16){
+    @return #{$px/$bc}em;
+}
+$mobileSmall: em(320);
+$mobileLarge: em(400);
+$smallTabletScreen: em(560);
+$tabletScreen: em(768);
+$desktopScreen: em(1024);
+$medDesktopScreen: em(1210);
+$largeDesktopScreen: em(1440);
+$retinaDisplay: em(2560);
+
+
+$padding-lg-phone: 30px;
+$padding-tablet: 100px;
+$padding-small-desktop: 125px;
+$padding-med-desktop: 125px;
+$padding-lg-desktop: 130px;
+$padding-retina: 560px; 
+$padding-retina-body: 690px;
+
+
+

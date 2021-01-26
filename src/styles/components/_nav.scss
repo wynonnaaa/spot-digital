@@ -1,0 +1,280 @@
+.header-div {
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $white;
+  z-index: 999;
+
+  header {
+    width: 100%;
+    height: 63px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(19,19,19,0.2)  ;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(19,19,19,0.2);
+    box-shadow: 0px 1px 4px 0px rgba(19,19,19,0.2);
+    background-color: $white;
+    z-index: inherit;
+
+    @include mq($mobileLarge) {
+      padding-left: $padding-lg-phone;
+      padding-right: $padding-lg-phone;
+    }
+
+    @include mq($tabletScreen) {
+      padding-left: $padding-tablet;
+      padding-right: $padding-tablet;
+      height: 80px;
+    } 
+
+    @include mq($desktopScreen) {
+      padding-left: 64px;
+      padding-right: 64px;
+      height: 100px
+    }
+    
+    @include mq($retinaDisplay) {
+        padding-left: $padding-retina;
+        padding-right: $padding-retina;
+        height: 150px;
+    }
+    
+    .logo {
+      line-height: 0;
+      max-width: 25%;
+
+      @include mq($tabletScreen) {
+        max-width: 18%;
+      }
+
+      @include mq($desktopScreen) {
+        max-width: 15%;
+      }
+    }
+  
+    .menu {
+
+      padding: 8px 0 8px 8px;
+      width: 40px;
+      height: 32px;
+      cursor: pointer;
+
+      @include mq($desktopScreen) {
+        display: none;
+      }
+
+      .nav-icon {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+
+        span {
+          position: absolute;
+          background: $black;
+          width: 100%;
+          height: 3px;
+          // transform: translateY(-50%);
+                  
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: .25s ease-in-out;
+          -moz-transition: .25s ease-in-out;
+          -o-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+        }
+
+        span:nth-child(1) {
+          top: 0;
+        }
+
+        span:nth-child(2), span:nth-child(3) {
+          top: 50%;
+          // top: 18px;
+        }
+
+        span:nth-child(4) {
+          top: 100%;
+          // top: 36px;
+        }
+
+        &#active span:nth-child(1) {
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+  
+        &#active span:nth-child(2) {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+  
+        &#active span:nth-child(3) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        
+        &#active span:nth-child(4) {
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+      }    
+
+
+    
+    }
+
+  }
+
+  .desktop-menu {
+    display: none;
+
+    @include mq($desktopScreen) {
+      display: block;
+      
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-between;
+        width: 30%;
+
+        li {
+
+          padding: 0 0 0 40px;
+
+          a {
+
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            transition: 0.15s;
+
+            &.active {
+              font-weight: 600;
+              cursor: default;
+            }
+
+            &:not(.active):hover, &:not(.active):focus {
+              text-decoration: underline;
+              color: $blue
+            }
+
+            
+
+          }
+
+        }
+        
+      }
+
+    }
+
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($black, 0.5);
+    
+    .overlay {
+      background: $white;
+      position: fixed;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-top: 100px;
+
+      @include mq($tabletScreen) {
+        margin-top: 150px;
+      }
+
+      li {
+        padding: 16px 24px;
+        margin-bottom: 4px;
+
+        @include mq($tabletScreen) {
+          padding-bottom: 32px;
+        }
+
+      }
+
+      a {
+        text-decoration: none;
+        height: auto;
+        padding: 16px 0;
+        transition: 0.12s;
+
+
+        &.active {
+          font-weight: 700;
+          cursor: default;
+        }
+
+        &:not(.active):hover, &:not(.active):focus {
+          text-decoration: underline;
+          color: $blue
+        }
+      }
+    }
+
+    .contact-info {
+      text-align: right;
+      margin-right: 24px;
+      margin-bottom: 24px;
+      p:nth-child(1) {
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+    }
+
+
+    &#open {
+      display: block;
+      // position: fixed;
+      // height: 100%;
+      // overflow: hidden;
+    }  
+  }
+
+}
+
+

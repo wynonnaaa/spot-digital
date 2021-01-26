@@ -1,0 +1,97 @@
+.error-wrapper {
+
+    padding: 0 15px;
+    margin-top: 61px;
+    min-height: 62.26vh;
+
+    @include mq($mobileLarge) {
+        padding-left: $padding-lg-phone;
+        padding-right: $padding-lg-phone;
+    }
+
+    @include mq($tabletScreen) {
+        padding-left: $padding-tablet;
+        padding-right: $padding-tablet;
+    }
+
+    @include mq($desktopScreen) {
+        padding-left: $padding-small-desktop;
+        padding-right: $padding-small-desktop;
+    }
+
+    @include mq($largeDesktopScreen) {
+        padding-left: $padding-lg-desktop;
+        padding-right: $padding-lg-desktop;
+    }
+    
+    @include mq($retinaDisplay) {
+        padding-left: $padding-retina-body;
+        padding-right: $padding-retina-body;
+        padding-top: 64px;
+        min-height: 68vh;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include mq($desktopScreen) {
+            margin-bottom: 100px;
+        }
+
+        @include mq($desktopScreen) {
+            margin-bottom: 120px;
+        }
+
+        .main {
+            margin-bottom: 16px;
+        }
+    }
+
+    .yellow-btn {
+        margin: 32px 0;
+        width: $button-width;
+        height: $button-height;
+        transition: 0.3s;
+
+        @include mq($desktopScreen) {
+            width: $button-width-desktop;
+            height: $button-height-desktop
+        }
+
+        p {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            @include mq($desktopScreen) {
+                font-size: $button-font-size-desktop;
+                font-weight: $button-font-weight-desktop;
+            }
+            
+        }
+        &:hover, &:active, &:focus {
+            background-color: $white;
+            box-shadow: none;
+            border: 1px solid $yellow;
+            p {
+                color: $yellow;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .image {
+        margin: 0 auto 32px;
+        max-width: 70%;
+
+        img {
+            min-width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,92 @@
+footer {
+
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+    width: 100%;
+
+    .logo {
+
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        width: inherit;
+
+        @include mq($tabletScreen) {
+            padding: 40px 0;
+        }
+
+        .img-logo, .text-logo {
+            max-width: 50%;
+            align-self: center;
+        }
+
+        .img-logo {
+            margin-right: 32px;
+
+            @include mq($desktopScreen) {
+                min-width: 13%;
+            }
+
+            img {
+                max-width: 100px;
+                @include mq($tabletScreen) {
+                    min-width: 100%;
+                }
+            }
+        }
+
+        p.footer-blurb {
+            color: $white;
+            font-size: 8px;
+            max-width: 105px;
+            
+            @include mq($tabletScreen) {
+                font-size: 10px;
+                max-width: 140px;
+            }
+
+            @include mq($tabletScreen) {
+                font-size: 12px;
+                max-width: 160px;
+            }
+
+            
+            @include mq($desktopScreen) {
+                font-size: 16px;
+                max-width: 236px;
+            }
+        }
+
+    }
+
+    .copyright-div {
+
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15px;
+
+        @include mq($desktopScreen) {
+            padding-bottom: 32px;
+        }
+
+        p.copyright {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 8px;
+
+            @include mq($desktopScreen) {
+                font-size: 10px;
+            }
+                        
+            @include mq($desktopScreen) {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,120 @@
+.about-wrapper {
+
+    padding: 0 15px;
+    margin-top: 61px;
+    padding-bottom: 127px;
+    background-image: url(../../images/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: 190% 90%;
+
+    @include mq($mobileLarge) {
+        padding-left: $padding-lg-phone;
+        padding-right: $padding-lg-phone;
+        background-position-x: 110%;
+    }
+
+    @include mq($tabletScreen) {
+        padding-left: $padding-tablet;
+        padding-right: $padding-tablet;
+        background-image: url(../../images/about-bg-desktop.png);
+        background-position: 90% 90%;
+        background-size: 40%;
+    }
+
+    @include mq($desktopScreen) {
+        padding-left: $padding-small-desktop;
+        padding-right: $padding-small-desktop;
+        background-position: 95% 85%;
+        background-size: 35%;
+    }
+
+    @include mq($medDesktopScreen) {
+        background-size: 40%;
+        background-position-y: 80%;
+    }
+
+    @include mq($largeDesktopScreen) {
+        padding-left: $padding-lg-desktop;
+        padding-right: $padding-lg-desktop;
+    }
+    
+    @include mq($retinaDisplay) {
+        padding-left: $padding-retina-body;
+        padding-right: $padding-retina-body;
+        background-size: 30%;
+        min-height: calc(100vh - 273px);
+        background-position: 80% 30%;
+    }
+
+    .about-header {
+        .page-title {
+            font-weight: 400;
+            font-size: 12px;
+            text-transform: uppercase;
+            @include mq($desktopScreen) {
+                padding-left: 0.35%;
+            }
+        }
+        margin-bottom: 40px;
+
+        @include mq($desktopScreen) {
+            max-width: 75%;
+        }
+        
+        @include mq($medDesktopScreen) {
+            max-width: 60%;
+        }
+
+    }
+
+    .about-body {
+        
+        @include mq($desktopScreen) {
+            max-width: 75%;
+        }
+
+        @include mq($medDesktopScreen) {
+            max-width: 65%;
+            margin-bottom: 48px;
+        }
+
+        p:first-child {
+            margin-bottom: 16px;
+        }
+        margin-bottom: 32px;
+    }
+
+    .yellow-btn {
+        width: $button-width;
+        height: $button-height;
+        transition: 0.3s;
+
+        @include mq($desktopScreen) {
+            width: $button-width-desktop;
+            height: $button-height-desktop
+        }
+
+        p {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            @include mq($desktopScreen) {
+                font-size: $button-font-size-desktop;
+                font-weight: $button-font-weight-desktop;
+            }
+            
+        }
+        &:hover, &:active, &:focus {
+            background-color: $white;
+            box-shadow: none;
+            border: 1px solid $yellow;
+            p {
+                color: $yellow;
+                font-weight: 700;
+            }
+        }
+    }
+}

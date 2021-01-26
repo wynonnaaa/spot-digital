@@ -1,0 +1,427 @@
+.home-wrapper {
+
+    .hero-content {
+        padding: 73px 15px 0;
+        min-height: 500px;
+        background-image: url(../../images/hero-image-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center -100%; 
+
+         @include mq($mobileLarge) {
+              padding-left: $padding-lg-phone;
+              padding-right: $padding-lg-phone;
+        }
+
+        @include mq($tabletScreen) {
+            padding-left: $padding-tablet;
+            padding-right: $padding-tablet;
+            background-image: url(../../images/hero-image-tablet.png);
+            background-position: 150% -500%;
+            background-size: 110%;
+        }
+
+        @include mq($desktopScreen) {
+            background-image: url(../../images/hero-image-desktop.png);
+            background-position: 90% 100%;
+            background-size: 115%;
+            padding: 105px $padding-small-desktop;
+        }
+    
+        @include mq($medDesktopScreen) {
+            padding-left: $padding-med-desktop;
+            padding-right: $padding-med-desktop;
+        }
+    
+        @include mq($largeDesktopScreen) {
+            padding: 150px 208px;
+            background-image: url(../../images/hero-image-lg.png);
+            background-size: 100%;
+            background-position: center 100%;
+            padding-bottom: 244px;
+        }
+        
+        @include mq($retinaDisplay) {
+            padding-left: $padding-retina-body;
+            padding-right: $padding-retina-body;
+            background-image: url(../../images/hero-image-desktop.png);
+            background-size: 60%;
+        }
+
+        .hero-text {
+
+            h1 {
+                margin-bottom: 16px;
+                @include mq($tabletScreen) {
+                    max-width: 350px;
+                    margin-bottom: 32px;
+                }
+
+                @include mq($desktopScreen) {
+                    max-width: 600px;
+                }
+
+                @include mq($largeDesktopScreen) {
+                    font-size: 56px;
+                    max-width: 75%;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 48px;
+                line-height: 150%;
+                font-weight: 400;
+                @include mq($tabletScreen) {
+                    max-width: 300px;
+                }
+
+                @include mq($desktopScreen) {
+                    max-width: 400px;
+                    font-size: 22px;
+                    margin-bottom: 56px;
+                }
+
+                @include mq($largeDesktopScreen) {
+                    font-size: 24px;
+                    max-width: 45%;
+                }
+            }
+        }
+
+        .yellow-btn {
+            width: $button-width;
+            height: $button-height;
+            transition: 0.25s;
+
+            @include mq($desktopScreen) {
+                width: $button-width-desktop;
+                height: $button-height-desktop
+            }
+
+            &:hover, &:active, &:focus {
+                background-color: $white;
+                border: 2px solid $yellow;
+                box-shadow: none;
+                p {
+                    color: $yellow;
+                }
+            }
+
+            p {
+                color: white;
+                font-weight: $button-font-weight;
+                font-size: $button-font-size;
+                text-transform: $button-font-style;
+
+                @include mq($desktopScreen) {
+                    font-size: $button-font-size-desktop;
+                    font-weight: $button-font-weight-desktop;
+                }
+            }
+
+        }
+
+    }
+
+    .row {
+        padding: 0 15px;
+
+        @include mq($mobileLarge) {
+            padding-left: $padding-lg-phone;
+            padding-right: $padding-lg-phone;
+          }
+
+        @include mq($tabletScreen) {
+            padding-left: $padding-tablet;
+            padding-right: $padding-tablet;
+        }
+
+        @include mq($desktopScreen) {
+            padding-left: $padding-small-desktop;
+            padding-right: $padding-small-desktop;
+        }
+    
+        @include mq($medDesktopScreen) {
+            padding-left: $padding-med-desktop;
+            padding-right: $padding-med-desktop;
+        }
+    
+        @include mq($largeDesktopScreen) {
+            padding-left: $padding-lg-desktop;
+            padding-right: $padding-lg-desktop;
+        }
+        
+        @include mq($retinaDisplay) {
+            padding-left: $padding-retina-body;
+            padding-right: $padding-retina-body;
+        }
+    }
+
+    .row1 {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 124px;
+
+        @include mq($desktopScreen) {
+            background-image: url(../../images/home-row1-bg.png);
+            background-repeat: no-repeat;
+            background-position: 10% 150%;
+            background-size: 50%;
+            padding-top: 112px;
+            padding-bottom: 210px;
+            margin-bottom: 0;
+        }
+
+        @include mq($medDesktopScreen) {
+            background-position-y: 100%;
+        }
+
+        @include mq($largeDesktopScreen) {
+            background-size: 38%;
+        }
+
+        @include mq($retinaDisplay) {
+            background-size: 23%;
+            background-position-x: 30%;
+        }
+
+        .row1-text {
+            @include mq($tabletScreen) {
+                text-align: center;
+                max-width: 525px;
+            }
+
+            @include mq($medDesktopScreen) {
+                min-width: 630px;
+            }
+
+            @include mq($tabletScreen) {
+                max-width: 625px;
+            }
+
+            h2 {
+                margin-bottom: 8px;
+                @include mq($tabletScreen) {
+                    margin-bottom: 16px;
+                }
+            }
+            p {
+                margin-bottom: 32px;
+                @include mq($tabletScreen) {
+                    line-height: 170%;
+                }
+            }
+        }
+
+        .yellow-outline-btn {
+            width: $button-width;
+            height: $button-height;
+            transition: 0.25s;
+
+            @include mq($desktopScreen){
+                width: $button-width-desktop;
+                height: $button-height-desktop;
+            }
+
+            &:hover, &:active, &:focus {
+                background-color: $yellow;
+                box-shadow: none;
+                p {
+                    color: $white;
+                    font-weight: 700;
+                }
+            }
+
+            p {
+                font-weight: 600;
+                font-size: $button-font-size;
+                text-transform: $button-font-style;
+                color: $yellow;
+
+                @include mq($desktopScreen) {
+                    font-size: $button-font-size-desktop;
+                    font-weight: $button-font-weight-desktop;
+                }
+            }
+
+        }
+
+    }
+
+    .row2 {
+
+        @include mq($desktopScreen) {
+            .row2-02.content#flipped {
+                flex-direction: row;  
+            
+                .text {
+                    margin-right: 0;
+                    margin-left: 16px;
+                }
+            }
+        }
+
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 90px;
+
+            @include mq($desktopScreen) {
+                flex-direction: row-reverse;  
+                justify-content: center;
+            }
+
+            @include mq($medDesktopScreen) {
+                justify-content: space-evenly;
+            }
+
+            .image {
+                margin-bottom: 24px;
+                @include mq($desktopScreen) {
+                    min-width: fit-content;
+                }
+            }
+
+            .text {
+                h3 {
+                    margin-bottom: 8px;
+                    @include mq($largeDesktopScreen) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                @include mq($desktopScreen) {
+                    max-width: 440px;
+                    margin-right: 16px;
+                }
+
+                @include mq($largeDesktopScreen) {
+                    max-width: 650px;
+
+                    p {
+                        letter-spacing: 0.25%;
+                        line-height: 180%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .row3 {
+
+        background-image: url(../../images/bg-spot-yellow.png);
+        background-repeat: no-repeat;
+        background-size: 600px auto;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 74px;
+
+        @include mq($tabletScreen) {
+            background-position-y: 10%;
+        }
+
+        @include mq($desktopScreen) {
+            flex-direction: row;
+            justify-content: center;
+            background-image: url(../../images/home-row3.png);
+            background-size: 50%;
+            background-position-y: center;
+            padding-top: 120px;
+
+            .image {
+                max-width: 45%;
+                img {
+                    min-width: 100%;
+                }
+            }
+        }
+
+        @include mq($largeDesktopScreen) {
+            background-size: 40%;
+
+            .image {
+                max-width: 40%;
+
+            } 
+        }
+
+        @include mq($retinaDisplay) {
+            background-size: 25%;
+        }
+
+        .text {
+            margin-bottom: 24px;
+
+            h3 {
+                margin-bottom: 16px;
+            }
+
+            ol {
+                padding: 0px 0 32px 20px;
+                li { 
+                    padding-left: 5px;
+                    @include mq($desktopScreen) {
+                        padding: 8px;
+                    }
+                }
+
+                @include mq($desktopScreen) {
+                    padding-bottom: 40px;
+                    max-width: 450px;
+                }
+
+                @include mq($largeDesktopScreen) {
+                    margin-right: 32px;
+                }
+            }
+        }
+
+        .button {
+            margin-bottom: 32px;
+            
+            .blue-btn {
+                width: $button-width;
+                height: $button-height;
+                transition: 0.25s;
+
+                @include mq($desktopScreen){
+                    width: $button-width-desktop;
+                    height: $button-height-desktop;
+                }
+
+                &:hover, &:active, &:focus {
+                    background-color: $white;
+                    border: 2px solid $blue;
+                    box-shadow: none;
+                    p {
+                        color: $blue;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    color: white;
+                    font-weight: $button-font-weight;
+                    font-size: $button-font-size;
+                    text-transform: $button-font-style;
+
+                    
+                    @include mq($desktopScreen) {
+                        font-size: $button-font-size-desktop;
+                        font-weight: $button-font-weight-desktop;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
